@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "b01e2a00-7603-4869-a936-9815d42e3bd9",
+		"name": "TaskManagementAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1459069"
+	},
+	"item": [
+		{
+			"name": "getAllTAsk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTAsk",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJOYW1pdGEiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiLCJ0cnVzdCJdLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9VU0VSIn1dLCJleHAiOjE3MjQzMjQ2OTYsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiI2MmFjYzM5My0yYzdiLTRlNzMtODk2My1kMDkwY2NiMjNkMTYiLCJjbGllbnRfaWQiOiJjbGllbnQxIn0.-ZLFjugwlY8gVDLKrxt57marE30hfBarwJZt5FFlndY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"testing\",\r\n    \"description\" :\"Book an appointment for doctor at 5:30 PM on 23rd JUly 2024\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/tasks/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"tasks",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterTaskBasedonTitle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/tasks?title=\"Create a doctor appointment\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "\"Create a doctor appointment\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pendingTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/tasks/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"tasks",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completedTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/tasks/completed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"tasks",
+						"completed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/api/tasks/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"api",
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Namita\",\r\n\t\"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCLients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Namita\",\r\n\t\"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "client1:password@localhost:8080/taskManagement/auth/login",
+					"auth": {
+						"user": "client1",
+						"password": "password"
+					},
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUSers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/taskManagement/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"taskManagement",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
